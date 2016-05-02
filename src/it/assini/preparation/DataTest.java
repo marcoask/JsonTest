@@ -7,6 +7,8 @@ import java.util.concurrent.TimeUnit;
 
 public class DataTest {
 	
+	static String separator ="\n=========================================================\n";
+	
 	public static void main(String[] args) throws ParseException {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd-M-yyyy hh:mm:ss");
 		
@@ -23,8 +25,22 @@ public class DataTest {
 		System.out.println("\nDifferenza in minuti: " + diff);
 		
 		//Dati n intervalli disponibili, divido l'intervallo temporale in n
+		System.out.println(separator);
+		int maxInterrogation = 10;
+		System.out.println("Divido l'intervvallo in "+maxInterrogation);
+		long oneInterval= diff/(maxInterrogation-1);
+		System.out.println("one Interval= "+oneInterval);
+		System.out.println("1:  "+date1);
+		for (int i=2; i<=maxInterrogation-1; i++){
+			long sum = date1.getTime()+oneInterval;
+			
+			System.out.println(i+":  "+sum);
+			
+		}
+		System.out.println(maxInterrogation+":  "+date2);
 		
-		
+		System.out.println(separator);
+			
 		//Data la lunghezza di un intervallo (m minuti), ricavo x intervalli lunghi m
 		
 	}
