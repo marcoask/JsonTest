@@ -78,8 +78,8 @@ public class DataTest {
 		Random random = new Random();
 		
 		int j = 3;
-		int n = 10-j;
-		int k = random.nextInt(n)+j;//Valori compresi tra 3 e 10
+		int n = 100-j;
+		int k = random.nextInt(n)+j;//Valori compresi tra 3 e 100
 		
 		return k;
 		
