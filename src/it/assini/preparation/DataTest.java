@@ -4,6 +4,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;
+import java.util.Scanner;
 import java.util.concurrent.TimeUnit;
 
 public class DataTest {
@@ -12,6 +13,10 @@ public class DataTest {
 	
 	public static void main(String[] args) throws ParseException {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd-M-yyyy hh:mm:ss");
+		
+		System.out.println("Write something: >");
+		Scanner something = new Scanner(System.in);
+		System.out.println("hai scritto \""+something.nextLine()+"\"");
 		
 		String date1InString = "01-05-2016 10:00:00";
 		Date date1 = sdf.parse(date1InString);
